@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+
+            android:id="@+id/toolbar"
+            android:layout_width="385dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rounded_border"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/timelineButtonMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38" />
+
+        <!--
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_menu_icon"
+            android:foregroundGravity="fill_horizontal|fill_vertical|fill"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+            -->
+
+        <ImageButton
+            android:id="@+id/timetableButtonMain"
+            android:layout_width="163dp"
+            android:layout_height="219dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider3" />
+
+        <ImageButton
+            android:id="@+id/timelineButtonMain"
+            android:layout_width="163dp"
+            android:layout_height="219dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toStartOf="@+id/divider3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/managebacButtonMain"
+            android:layout_width="163dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/timelineButtonMain"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/timelineButtonMain"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <ImageButton
+            android:id="@+id/settingsButtonMain"
+            android:layout_width="163dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/timetableButtonMain"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/timetableButtonMain"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="1dp"
+            android:layout_height="729dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <ImageView
+            android:id="@+id/settingsImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/ic_settings_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsButtonMain"
+            app:layout_constraintEnd_toEndOf="@+id/settingsButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/settingsButtonMain"
+            app:layout_constraintTop_toTopOf="@+id/settingsButtonMain"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <TextView
+            android:id="@+id/settingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/settings"
+            android:textColor="#252525"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/settingsButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/settingsButtonMain"
+            app:layout_constraintTop_toBottomOf="@+id/settingsImage" />
+
+        <TextView
+            android:id="@+id/settingsText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/timetables"
+            android:textColor="#252525"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/settingsButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/settingsButtonMain"
+            app:layout_constraintTop_toBottomOf="@+id/timetableImage" />
+
+        <TextView
+            android:id="@+id/settingsText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/managebac"
+            android:textColor="#252525"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/managebacButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/managebacButtonMain"
+            app:layout_constraintTop_toBottomOf="@+id/managebacImage" />
+
+        <TextView
+            android:id="@+id/timelineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/timeline"
+            android:textColor="#252525"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/timelineButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/timelineButtonMain"
+            app:layout_constraintTop_toBottomOf="@+id/timelineImage" />
+
+        <ImageView
+            android:id="@+id/timelineImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/ic_timeline_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/timelineButtonMain"
+            app:layout_constraintEnd_toEndOf="@+id/timelineButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/timelineButtonMain"
+            app:layout_constraintTop_toTopOf="@+id/timelineButtonMain"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <ImageView
+            android:id="@+id/managebacImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="@+id/managebacButtonMain"
+            app:layout_constraintEnd_toEndOf="@+id/managebacButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/managebacButtonMain"
+            app:layout_constraintTop_toTopOf="@+id/managebacButtonMain"
+            app:layout_constraintVertical_bias="0.35000002"
+            app:srcCompat="@drawable/managebac_icon" />
+
+        <ImageView
+            android:id="@+id/timetableImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/ic_timetable_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/timetableButtonMain"
+            app:layout_constraintEnd_toEndOf="@+id/timetableButtonMain"
+            app:layout_constraintStart_toStartOf="@+id/timetableButtonMain"
+            app:layout_constraintTop_toTopOf="@+id/timetableButtonMain"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <!--
+                        <FrameLayout
+                            android:id="@+id/fragment_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        tools:visibility="invisible" />
+-->
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

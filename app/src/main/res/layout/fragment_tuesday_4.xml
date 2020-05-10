@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TuesdayFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tue_4_period_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="Period 1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tue_4_period_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="Period 2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tue_4_period_1" />
+
+        <TextView
+            android:id="@+id/tue_4_period_3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="Period 3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tue_4_period_2" />
+
+        <TextView
+            android:id="@+id/tue_4_period_4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="Period 4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tue_4_period_3" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

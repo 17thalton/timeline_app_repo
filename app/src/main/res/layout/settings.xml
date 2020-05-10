@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="?colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/rounded_border"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timetableEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColor="#252525"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_language_selection"
+        style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+        android:layout_width="240dp"
+        android:layout_height="32dp"
+        android:entries="@array/language_selection"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <TextView
+        android:id="@+id/text_select_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/language"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_language_selection"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_language_selection"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinner_language_selection" />
+
+    <Spinner
+        android:id="@+id/spinner_grade_selection"
+        style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+        android:layout_width="240dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="120dp"
+        android:entries="@array/grade_selection"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_language_selection" />
+
+    <TextView
+        android:id="@+id/text_select_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/grade"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_grade_selection"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_grade_selection"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinner_grade_selection" />
+
+    <TextView
+        android:id="@+id/text_select_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/theme_and_accent"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_theme_selection"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_theme_selection"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinner_theme_selection" />
+
+    <Spinner
+        android:id="@+id/spinner_theme_selection"
+        style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="120dp"
+        android:entries="@array/theme_selection"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/spinner_grade_selection"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_grade_selection" />
+
+    <ImageButton
+        android:id="@+id/accentButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_border_360"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_theme_selection"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_grade_selection"
+        app:layout_constraintTop_toTopOf="@+id/spinner_theme_selection" />
+
+    <TextView
+        android:id="@+id/popupTether"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="356dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/accentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

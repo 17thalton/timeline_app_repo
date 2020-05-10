@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default -->
+    <color name="colorPrimaryDefault">#005180F0</color>
+    <color name="colorPrimaryDarkDefault">#005180F0</color>
+
+    <!-- Blue -->
+    <color name="colorAccent">#5180F0</color>
+
+
+
+    <!-- Red -->
+    <color name="colorAccentRed">#FC5151</color>
+
+    <!-- Green -->
+    <color name="colorAccentGreen">#5CFC51</color>
+
+    <!-- ALl accent colors -->
+    <color name="color_blue_middle">#5180F0</color>
+
+
+
+
+</resources>

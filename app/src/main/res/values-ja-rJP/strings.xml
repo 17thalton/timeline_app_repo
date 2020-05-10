@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">タイムライン　アプリ</string>
+    <string name="select_your_grade">クラスを選んでください</string>
+    <string name="welcome">ようこそ</string>
+    <string name="main_menu">メニュー</string>
+    <string-array name="grade_selection">
+        <item>9年</item>
+        <item>8年</item>
+        <item>7年</item>
+        <item>他</item>
+    </string-array>
+    <string-array name="theme_selection">
+        <item>白</item>
+        <item>黒</item>
+        <item>システム</item>
+    </string-array>
+    <string-array name="language_selection">
+        <item>English</item>
+        <item>日本語</item>
+    </string-array>
+    <string name="pick_a_theme">テーマを選んでください</string>
+    <string name="日本語">日本語</string>
+    <string name="english">English</string>
+    <string name="todo">TODO</string>
+    <string name="language">言語</string>
+    <string name="choose_a_language">言語を選んでください</string>
+    <string name="continuetext">始める</string>
+    <string name="settings">設定</string>
+    <string name="managebac">マネージバック</string>
+    <string name="timetables">時刻表</string>
+    <string name="grade">クラス</string>
+    <string name="theme_and_accent">テーマとアクセントカラー</string>
+    <string name="period_1">1 時間目</string>
+    <string name="period_2">2 時間目</string>
+    <string name="period_3">3 時間目</string>
+    <string name="period_4">4 時間目</string>
+    <string name="period_5">5 時間目</string>
+    <string name="period_5_club">5 時間目 (クラブ)</string>
+    <string name="period_6_club">6 時間目 (クラブ)</string>
+    <string name="fill_out_previous">前のフィールドに入力して下さい</string>
+    <string name="monday">月曜日</string>
+    <string name="tuesday">火曜日</string>
+    <string name="wednesday">水曜日</string>
+    <string name="thursday">木曜日</string>
+    <string name="friday">金曜日</string>
+    <string name="save_and_return">保存して戻る</string>
+    <string name="edit_timetable_for">時刻表を変える:</string>
+    <string name="short_monday">月</string>
+    <string name="short_tuesday">火</string>
+    <string name="short_wednesday">水</string>
+    <string name="short_thursday">木</string>
+    <string name="short_friday">金</string>
+    <string name="option_ok">はい</string>
+    <string name="option_cancel">いいえ</string>
+    <string name="edit_timetables">時刻表を変える</string>
+    <string name="return_to_timetable">時刻表の設定へ戻りますか?</string>
+    <string name="any_unsaved_changes">保存されてない変更はなくなります</string>
+    <string name="subject_english">英語</string>
+    <string name="subject_science">科学</string>
+    <string name="subject_individuals">I&amp;S</string>
+    <string name="subject_japanese">日本語</string>
+    <string name="subject_health">保険</string>
+    <string name="subject_physical">体育</string>
+    <string name="subject_design">デザイン</string>
+    <string name="subject_art">図工</string>
+    <string name="subject_music">音楽</string>
+    <string name="subject_math">数学</string>
+    <string name="subject_qna">Q&amp;A</string>
+    <string name="subject_service">サービス\nラーニング</string>
+    <string name="subject_community">コミュニティー\nプロジェクト</string><![CDATA[
+
+    >
+
+]]>
+</resources>

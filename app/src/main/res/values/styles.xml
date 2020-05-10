@@ -1,0 +1,151 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDefault</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDefault</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+    </style>
+
+
+    <style name="DarkStatusBarText_blue_middle" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LightStatusBarText_blue_middle" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="DarkStatusBarText_blue_dark" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#3F51B5</item>
+    </style>
+
+    <style name="LightStatusBarText_blue_dark" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#3F51B5</item>
+    </style>
+
+    <style name="DarkStatusBarText_blue_light" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#51C3F0</item>
+    </style>
+
+    <style name="LightStatusBarText_blue_light" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#51C3F0</item>
+    </style>
+
+
+    <style name="DarkStatusBarText_red" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">@color/colorAccentRed</item>
+    </style>
+
+    <style name="LightStatusBarText_red" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">@color/colorAccentRed</item>
+    </style>
+
+    <style name="DarkStatusBarText_orange" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#FF5722</item>
+    </style>
+
+    <style name="LightStatusBarText_orange" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#FF5722</item>
+    </style>
+
+
+    <style name="DarkStatusBarText_magenta" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#E040FB</item>
+    </style>
+
+    <style name="LightStatusBarText_magenta" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#E040FB</item>
+    </style>
+
+    <style name="DarkStatusBarText_green_middle" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">@color/colorAccentGreen</item>
+    </style>
+
+    <style name="LightStatusBarText_green_middle" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">@color/colorAccentGreen</item>
+    </style>
+
+    <style name="DarkStatusBarText_green_dark" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#00C853</item>
+    </style>
+
+    <style name="LightStatusBarText_green_dark" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#00C853</item>
+    </style>
+
+    <style name="DarkStatusBarText_yellow" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#FFD600</item>
+    </style>
+
+    <style name="LightStatusBarText_yellow" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#FFD600</item>
+    </style>
+
+    <style name="DarkStatusBarText_purple" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#5E35B1</item>
+    </style>
+
+    <style name="LightStatusBarText_purple" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#5E35B1</item>
+    </style>
+
+
+    <style name="DarkStatusBarText_grey_light" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#B3B3B3</item>
+    </style>
+
+    <style name="LightStatusBarText_grey_light" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#B3B3B3</item>
+    </style>
+
+
+    <style name="DarkStatusBarText_grey_dark" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorAccent">#515151</item>
+    </style>
+
+    <style name="LightStatusBarText_grey_dark" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">#515151</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>
