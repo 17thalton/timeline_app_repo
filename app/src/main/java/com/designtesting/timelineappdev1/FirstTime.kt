@@ -291,6 +291,8 @@ class FirstTime : AppCompatActivity() {
                 //save setting that remembers that continue button has been pressed
                 editor.putBoolean("FIRST_TIME", false)
 
+                editor.putString("RESET_TIMETABLE", "ALL")
+
                 //apply changes
                 editor.apply()
 

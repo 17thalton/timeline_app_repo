@@ -31,10 +31,22 @@ class MondayFragment : Fragment() {
 
         else{
 
-            if(set.elementAt(4).removePrefix("5") == ""){
+            if(set.elementAt(0).removePrefix("1").isEmpty()){
                 amountOfPeriods = 4
             }
-            else if(set.elementAt(5).removePrefix("6") == ""){
+            else if(set.elementAt(1).removePrefix("2").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(2).removePrefix("3").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(3).removePrefix("4").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(4).removePrefix("5").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(5).removePrefix("6").isEmpty()){
                 amountOfPeriods = 5
             }
             else{

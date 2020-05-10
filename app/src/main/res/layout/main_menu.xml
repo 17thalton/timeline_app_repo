@@ -149,13 +149,12 @@
             android:id="@+id/settingsText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:text="@string/managebac"
             android:textColor="#252525"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/managebacButtonMain"
             app:layout_constraintStart_toStartOf="@+id/managebacButtonMain"
-            app:layout_constraintTop_toBottomOf="@+id/managebacImage" />
+            app:layout_constraintTop_toTopOf="@+id/settingsText" />
 
         <TextView
             android:id="@+id/timelineText"
@@ -182,14 +181,15 @@
 
         <ImageView
             android:id="@+id/managebacImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/globe_icon_foreground"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="@+id/managebacButtonMain"
             app:layout_constraintEnd_toEndOf="@+id/managebacButtonMain"
             app:layout_constraintStart_toStartOf="@+id/managebacButtonMain"
             app:layout_constraintTop_toTopOf="@+id/managebacButtonMain"
-            app:layout_constraintVertical_bias="0.35000002"
-            app:srcCompat="@drawable/managebac_icon" />
+            app:layout_constraintVertical_bias="0.26" />
 
         <ImageView
             android:id="@+id/timetableImage"

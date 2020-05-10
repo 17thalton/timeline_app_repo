@@ -436,7 +436,7 @@ class TimetableEditor : AppCompatActivity() {
                 )
             )
 
-            editor.putBoolean("TIMETABLE_IS_DEFAULT", false)
+            editor.putBoolean("${editingDay}_IS_DEFAULT", false)
 
             editor.apply()
             Thread.sleep(400)
@@ -452,8 +452,7 @@ class TimetableEditor : AppCompatActivity() {
             builder.setCancelable(true)
 
             builder.setPositiveButton(getString(R.string.option_ok)) { _, _ ->
-                editor.putBoolean("TIMETABLE_IS_DEFAULT", true)
-                editor.putBoolean("RESET_TIMETABLE", true)
+                editor.putString("RESET_TIMETABLE", editingDay)
                 editor.apply()
                 Thread.sleep(400)
                 startActivity(Intent(applicationContext, TimetableSettings::class.java))

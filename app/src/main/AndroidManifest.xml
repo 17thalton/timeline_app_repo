@@ -21,7 +21,6 @@
         <activity android:name=".FirstTime" />
         <activity android:name=".Managebac" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".RecyclerActivity" />
         <activity android:name=".TimetableActivity" />
         <activity android:name=".TimetableSettings" />
         <activity android:name=".TimetableEditor" />

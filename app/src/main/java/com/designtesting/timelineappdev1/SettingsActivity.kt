@@ -245,7 +245,7 @@ class SettingsActivity : AppCompatActivity() {
                         1 -> editor.putString("LANGUAGE", "JAPANESE")
                     }
 
-                    editor.putBoolean("RESET_TIMETABLE", true)
+                    editor.putString("RESET_TIMETABLE", "ALL")
 
 
                     //apply changes
@@ -290,7 +290,7 @@ class SettingsActivity : AppCompatActivity() {
                         3 -> editor.putString("GRADE", "OTHER")
                     }
 
-                    editor.putBoolean("RESET_TIMETABLE", true)
+                    editor.putString("RESET_TIMETABLE", "ALL")
 
                     //apply changes
                     editor.apply()

@@ -68,9 +68,48 @@
     <string name="subject_math">数学</string>
     <string name="subject_qna">Q&amp;A</string>
     <string name="subject_service">サービス\nラーニング</string>
-    <string name="subject_community">コミュニティー\nプロジェクト</string><![CDATA[
+    <string name="subject_community">コミュニティー\nプロジェクト</string>
+    <string name="saturday">土曜日</string>
+    <string name="sunday">日曜日</string>
+    <string name="reset_to_default">時刻表をデフォルトにリセットしますか?</string>
+    <string name="only_this_day">この日だけリセットされます</string>
+    <string name="colour">色</string>
+    <string name="light_blue">水色</string>
+    <string name="middle_blue">青</string>
+    <string name="dark_blue">ダーク ブルー</string>
+    <string name="middle_green">グリーン</string>
+    <string name="dark_green">ダーク グリーン</string>
+    <string name="yellow">黄色</string>
+    <string name="orange">オレンジ</string>
+    <string name="red">赤</string>
+    <string name="magenta">マゼンタ</string>
+    <string name="purple">むらさき</string>
+    <string name="light_grey">ライト グレー</string>
+    <string name="dark_grey">ダーク グレー</string>
+    <string name="create_new_task">タスクを作る</string>
+    <string name="title">題名</string>
+    <string name="description">解説</string>
+    <string name="return_to_timeline">タイムラインへ戻りますか?</string>
+    <string name="please_input_a_title">題名を書いてください</string>
+    <string name="january">1月</string>
+    <string name="february">2月</string>
+    <string name="march">3月</string>
+    <string name="april">4月</string>
+    <string name="may">5月</string>
+    <string name="june">6月</string>
+    <string name="july">7月</string>
+    <string name="august">8月</string>
+    <string name="september">9月</string>
+    <string name="october">10月</string>
+    <string name="november">11月</string>
+    <string name="december">12月</string>
+    <string name="edit_task">タスクを変更する</string>
+    <string name="notice">お知らせ</string>
+    <string name="privacy_notice">このアプリ内で入力した情報は、このデバイスにのみ保存されます。 外部デバイスには送信されません。</string><![CDATA[
+
 
     >
+
 
 ]]>
 </resources>

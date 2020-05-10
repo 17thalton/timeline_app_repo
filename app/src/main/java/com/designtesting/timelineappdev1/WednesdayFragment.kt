@@ -14,12 +14,49 @@ class WednesdayFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+
+
         //get sharedPreferences
         val sharedPreferences: SharedPreferences = context!!.getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
 
         val set = sharedPreferences.getStringSet("tt_wed", setOf())!!.sorted()
 
-        when (set.count()){
+        var amountOfPeriods = 10
+
+
+
+        if(sharedPreferences.getBoolean("TIMETABLE_IS_DEFAULT", true)) {
+            amountOfPeriods = set.count()
+        }
+
+        else{
+
+            if(set.elementAt(0).removePrefix("1").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(1).removePrefix("2").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(2).removePrefix("3").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(3).removePrefix("4").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(4).removePrefix("5").isEmpty()){
+                amountOfPeriods = 4
+            }
+            else if(set.elementAt(5).removePrefix("6").isEmpty()){
+                amountOfPeriods = 5
+            }
+            else{
+                amountOfPeriods = 6
+            }
+        }
+
+
+
+        when (amountOfPeriods){
             4 -> {
                 val myInflatedView: View =
                     inflater.inflate(R.layout.fragment_wednesday_4, container, false)
@@ -84,10 +121,7 @@ class WednesdayFragment : Fragment() {
         }
 
 
-        val inflatedView: View =
-            inflater.inflate(R.layout.fragment_wednesday_5, container, false)
-
-        return inflatedView
+        return inflater.inflate(R.layout.fragment_wednesday_5, container, false)
 
 
     }

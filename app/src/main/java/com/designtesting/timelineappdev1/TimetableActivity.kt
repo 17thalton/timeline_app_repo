@@ -12,6 +12,7 @@ import android.util.TypedValue
 import android.view.Window
 import android.view.WindowManager
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -30,49 +31,147 @@ class TimetableActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
 
 
+        fun resetMonday() {
+            if(!sharedPreferences.getBoolean("Monday_IS_DEFAULT", true) && sharedPreferences.getString("RESET_TIMETABLE", "") == "ALL") {
+                return
+            }
 
-        //todo fix timetable editing max string length (within text inputs)
-        //todo (possible) implement individual TIMETABLE_IS_DEFAULT variables for each day
-        //sets the sharedpreferences for the timetables to their static defaults if a reset is requested and the user has not already customised them
-        if(!sharedPreferences.getBoolean("TIMETABLE_IS_DEFAULT", true)){
-            editor.putBoolean("RESET_TIMETABLE", false)
-            editor.apply()
-        }
-        else if (sharedPreferences.getBoolean("RESET_TIMETABLE", true)) {
+            editor.putBoolean("Monday_IS_DEFAULT", true)
+
             when(sharedPreferences.getString("GRADE", "9")) {
                 "9" -> {
                     editor.putStringSet("tt_mon",setOf("1${getString(R.string.subject_individuals)}", "2${getString(R.string.subject_science)}", "3${getString(R.string.subject_english)}", "4${getString(R.string.subject_qna)}"))
-                    editor.putStringSet("tt_tue", setOf("1${getString(R.string.subject_japanese)}", "2${getString(R.string.subject_math)}", "3${getString(R.string.subject_art)}", "4${getString(R.string.subject_qna)}"))
-                    editor.putStringSet("tt_wed", setOf("1${getString(R.string.subject_design)}", "2${getString(R.string.subject_individuals)}", "3${getString(R.string.subject_science)}", "4"))
-                    editor.putStringSet("tt_thu", setOf("1${getString(R.string.subject_art)}", "2${getString(R.string.subject_health)}", "3${getString(R.string.subject_japanese)}", "4${getString(R.string.subject_qna)}"))
-                    editor.putStringSet("tt_fri", setOf("1${getString(R.string.subject_design)}", "2${getString(R.string.subject_english)}", "3${getString(R.string.subject_math)}", "4${getString(R.string.subject_qna)}"))
                 }
                 "8" -> {
                     editor.putStringSet("tt_mon",setOf("1${getString(R.string.subject_science)}", "2${getString(R.string.subject_art)}", "3${getString(R.string.subject_english)}", "4${getString(R.string.subject_qna)}"))
+                        }
+                "7" -> {
+                    editor.putStringSet("tt_mon",setOf("1${getString(R.string.subject_art)}", "2${getString(R.string.subject_japanese)}", "3${getString(R.string.subject_math)}", "4${getString(R.string.subject_qna)}"))
+                                  }
+                "OTHER" -> {
+                    editor.putStringSet("tt_mon",setOf("1Monday\ntimetable", "2is not set", "3", "4"))
+
+                }
+            }
+
+
+        }
+
+        fun resetTuesday(){
+            if(!sharedPreferences.getBoolean("Tuesday_IS_DEFAULT", true) && sharedPreferences.getString("RESET_TIMETABLE", "") == "ALL") {
+                return
+            }
+
+            editor.putBoolean("Tuesday_IS_DEFAULT", true)
+            when(sharedPreferences.getString("GRADE", "9")) {
+                "9" -> {
+                    editor.putStringSet("tt_tue", setOf("1${getString(R.string.subject_japanese)}", "2${getString(R.string.subject_math)}", "3${getString(R.string.subject_art)}", "4${getString(R.string.subject_qna)}"))
+                }
+                "8" -> {
                     editor.putStringSet("tt_tue", setOf("1${getString(R.string.subject_japanese)}", "2${getString(R.string.subject_design)}", "3${getString(R.string.subject_math)}", "4${getString(R.string.subject_community)}"))
+                }
+                "7" -> {
+                    editor.putStringSet("tt_tue", setOf("1${getString(R.string.subject_individuals)}", "2${getString(R.string.subject_science)}", "3${getString(R.string.subject_english)}", "4${getString(R.string.subject_qna)}"))
+                }
+                "OTHER" -> {
+                    editor.putStringSet("tt_tue", setOf("1Tuesday\ntimetable", "2is not set", "3", "4"))
+                }
+            }
+        }
+
+        fun resetWednesday() {
+            if(!sharedPreferences.getBoolean("Wednesday_IS_DEFAULT", true) && sharedPreferences.getString("RESET_TIMETABLE", "") == "ALL") {
+                return
+            }
+
+            editor.putBoolean("Wednesday_IS_DEFAULT", true)
+            when(sharedPreferences.getString("GRADE", "9")) {
+                "9" -> {
+                    editor.putStringSet("tt_wed", setOf("1${getString(R.string.subject_design)}", "2${getString(R.string.subject_individuals)}", "3${getString(R.string.subject_science)}", "4"))
+                }
+                "8" -> {
                     editor.putStringSet("tt_wed", setOf("1${getString(R.string.subject_health)}", "2${getString(R.string.subject_design)}", "3${getString(R.string.subject_individuals)}", "4"))
+                }
+                "7" -> {
+                    editor.putStringSet("tt_wed", setOf("1${getString(R.string.subject_math)}", "2${getString(R.string.subject_japanese)}", "3${getString(R.string.subject_design)}", "4"))
+                }
+                "OTHER" -> {
+                    editor.putStringSet("tt_wed", setOf("1Wednesday\ntimetable", "2is not set", "3", "4"))
+                }
+            }
+        }
+
+        fun resetThursday() {
+            if(!sharedPreferences.getBoolean("Thursday_IS_DEFAULT", true) && sharedPreferences.getString("RESET_TIMETABLE", "") == "ALL") {
+                return
+            }
+
+            editor.putBoolean("Thursday_IS_DEFAULT", true)
+            when(sharedPreferences.getString("GRADE", "9")) {
+                "9" -> {
+                    editor.putStringSet("tt_thu", setOf("1${getString(R.string.subject_art)}", "2${getString(R.string.subject_health)}", "3${getString(R.string.subject_japanese)}", "4${getString(R.string.subject_qna)}"))
+                }
+                "8" -> {
                     editor.putStringSet("tt_thu", setOf("1${getString(R.string.subject_math)}", "2${getString(R.string.subject_art)}", "3${getString(R.string.subject_japanese)}", "4${getString(R.string.subject_qna)}"))
+                }
+                "7" -> {
+                    editor.putStringSet("tt_thu", setOf("1${getString(R.string.subject_individuals)}", "2${getString(R.string.subject_english)}", "3${getString(R.string.subject_health)}", "4${getString(R.string.subject_qna)}"))
+                }
+                "OTHER" -> {
+                    editor.putStringSet("tt_thu", setOf("1Thursday\ntimetable", "2is not set", "3", "4"))
+                }
+            }
+        }
+
+        fun resetFriday() {
+            if(!sharedPreferences.getBoolean("Friday_IS_DEFAULT", true) && sharedPreferences.getString("RESET_TIMETABLE", "") == "ALL") {
+                return
+            }
+
+            editor.putBoolean("Friday_IS_DEFAULT", true)
+            when(sharedPreferences.getString("GRADE", "9")) {
+                "9" -> {
+                    editor.putStringSet("tt_fri", setOf("1${getString(R.string.subject_design)}", "2${getString(R.string.subject_english)}", "3${getString(R.string.subject_math)}", "4${getString(R.string.subject_qna)}"))
+                }
+                "8" -> {
                     editor.putStringSet("tt_fri", setOf("1${getString(R.string.subject_individuals)}", "2${getString(R.string.subject_english)}", "3${getString(R.string.subject_science)}", "4${getString(R.string.subject_qna)}"))
                 }
                 "7" -> {
-                    editor.putStringSet("tt_mon",setOf("1${getString(R.string.subject_art)}", "2${getString(R.string.subject_japanese)}", "3${getString(R.string.subject_math)}", "4${getString(R.string.subject_qna)}"))
-                    editor.putStringSet("tt_tue", setOf("1${getString(R.string.subject_individuals)}", "2${getString(R.string.subject_science)}", "3${getString(R.string.subject_english)}", "4${getString(R.string.subject_qna)}"))
-                    editor.putStringSet("tt_wed", setOf("1${getString(R.string.subject_math)}", "2${getString(R.string.subject_japanese)}", "3${getString(R.string.subject_design)}", "4"))
-                    editor.putStringSet("tt_thu", setOf("1${getString(R.string.subject_individuals)}", "2${getString(R.string.subject_english)}", "3${getString(R.string.subject_health)}", "4${getString(R.string.subject_qna)}"))
                     editor.putStringSet("tt_fri", setOf("1${getString(R.string.subject_design)}", "2${getString(R.string.subject_science)}", "3${getString(R.string.subject_art)}", "4${getString(R.string.subject_qna)}"))
                 }
                 "OTHER" -> {
-                    editor.putStringSet("tt_mon",setOf("1Monday\ntimetable", "2is not set", "3", "4"))
-                    editor.putStringSet("tt_tue", setOf("1Tuesday\ntimetable", "2is not set", "3", "4"))
-                    editor.putStringSet("tt_wed", setOf("1Wednesday\ntimetable", "2is not set", "3", "4"))
-                    editor.putStringSet("tt_thu", setOf("1Thursday\ntimetable", "2is not set", "3", "4"))
                     editor.putStringSet("tt_fri", setOf("1Friday\ntimetable", "2is not set", "3", "4"))
                 }
             }
-            editor.putBoolean("RESET_TIMETABLE", false)
+        }
+
+
+        //todo fix timetable editing max string length (within text inputs)
+        //sets the sharedpreferences for the timetables to their static defaults if a reset is requested and the user has not already customised them
+
+        if (sharedPreferences.getString("RESET_TIMETABLE", "") != "") {
+
+            when (sharedPreferences.getString("RESET_TIMETABLE", "")) {
+                "Monday" -> resetMonday()
+                "Tuesday" -> resetTuesday()
+                "Wednesday" -> resetWednesday()
+                "Thursday" -> resetThursday()
+                "Friday" -> resetFriday()
+                "ALL" -> {
+                    resetMonday()
+                    resetTuesday()
+                    resetWednesday()
+                    resetThursday()
+                    resetFriday()
+                }
+            }
+
+            editor.putString("RESET_TIMETABLE", "")
+
             editor.apply()
         }
 
+        Thread.sleep(1000)
         //create function that returns true if the OS's dark theme is enabled
         fun isDarkThemeActive(activity: Activity): Boolean {
             return activity.resources.configuration.uiMode and

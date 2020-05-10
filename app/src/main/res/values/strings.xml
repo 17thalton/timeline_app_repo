@@ -10,7 +10,7 @@
     <string name="language">Language</string>
     <string name="choose_a_language">Choose a language</string>
     <string name="continuetext">Continue</string>
-    <string name="error">error</string>
+    <string name="error" translatable="false">error</string>
     <string-array name="grade_selection">
         <item>Grade 9</item>
         <item>Grade 8</item>
@@ -38,32 +38,32 @@
         <item>Green</item>
         <item>Dark green</item>
     </string-array>
-    <string name="title_activity_navigation_drawer">Navigation_drawer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_navigation_drawer" translatable="false">Navigation_drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home" translatable="false">Home</string>
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
 
-    <string name="home_second">Home Second</string>
-    <string name="settings">Settings</string>
+    <string name="home_second" translatable="false">Home Second</string>
+    <string name="settings" translatable="false">Settings</string>
     <string name="theme_and_accent">Theme and accent colour</string>
     <string name="grade">Grade</string>
     <string name="managebac">Managebac</string>
     <string name="timetables">Timetables</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_timetable_">Timetable_Activity</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_timetable_" translatable="false">Timetable_Activity</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
     <string name="period_1">Period 1</string>
     <string name="period_2">Period 2</string>
